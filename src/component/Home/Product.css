@@ -1,0 +1,62 @@
+.productCard {
+    width: 14vmax;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: rgb(38, 38, 38);
+    margin: 2vmax;
+    transition: all 0.5s;
+    padding-bottom: 0.5vmax;
+    /* border: 1px solid black; */
+}
+
+.productCard>img {
+    width: 14vmax;
+}
+
+.productCard>div {
+    margin: 0.5vmax;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.productCard>div>span {
+    margin: 0.5vmax;
+    font: 300 0.7vmax "Franklin Gothis Medium";
+}
+
+.productCard>p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.2vmax;
+    margin: 1vmax 0.5vmax;
+    margin-bottom: 0;
+}
+
+.productCard>span {
+    margin: 0.5vmax;
+    color: tomato;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.productCard:hover {
+    box-shadow: 0 0 5px rgba(15, 15, 15, 0.527);
+    transform: translateY(-2vmax);
+}
+
+@media (max-width:620px){
+    .productCard > p {
+        font-size: 1.7vmax;
+    }
+    .productCard>div {
+        margin: 0vmax;
+        display: block
+    }
+    .productCard>span {
+        font-size: 1.5vmax;
+    }
+    .productCard>div>span {
+        margin: 0 0.5vmax;
+        font: 300 1.2vmax "Franklin Gothis Medium";
+    }
+}

@@ -7,7 +7,7 @@ import { MdSearch } from "react-icons/md";
 const Header = () => {
   return (
     <ReactNavbar
-      burgerColor="#A20000"
+      burgerColor="black"
       logo={logo}
       searchIcon="true"
       cartIcon="true"
