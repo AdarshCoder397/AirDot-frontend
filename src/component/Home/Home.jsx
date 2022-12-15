@@ -1,18 +1,22 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
 import { MdShoppingBasket } from "react-icons/md";
-import ProductImg from "../../img/logo.png";
 import "./Home.css";
 import Product from "./Product.jsx";
+import MetaData from "../layout/MetaData";
+import {getProduct} from '../../actions/productAction'
+import {useSelector,useDispatch} from 'react-redux'
 
-const product = {
-  name: "AirDot",
-  images: [{ url: ProductImg }],
-  price: "$35",
-  _id: "adarsh",
-};
 const Home = () => {
+  const dispatch = useDispatch()
+  const {loading,error,products,productsCount} = useSelector(state => state.products)
+  console.log(productsCount,products,error,loading)
+  useEffect(() => {
+    dispatch(getProduct())
+  }, [dispatch])
+  
   return (
-    <Fragment>
+    <Fragment> 
+      <MetaData title={"AirDot"}/>
       <div className="banner">
         <p>
           Welcome to the <span>AirDot</span>!
@@ -28,14 +32,7 @@ const Home = () => {
       <div id="main">
         <h2 className="homeh2">Top Products</h2>
         <div className="container" id="container">
-          <Product product={product} />
-          <Product product={product} />
-          <Product product={product} />
-          <Product product={product} />
-          <Product product={product} />
-          <Product product={product} />
-          <Product product={product} />
-          <Product product={product} />
+          {products && products.map(product=> <Product product={product}/>)}
         </div>
       </div>
     </Fragment>

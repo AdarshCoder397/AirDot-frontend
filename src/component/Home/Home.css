@@ -10,13 +10,21 @@
     transition: all 0.5s;
 }
 
+@media screen and (max-width:600px){
+    .banner > p {
+        font:500 5.2vmax 'Courier' !important;
+    }
+    .banner > h2 {
+        font: 500 4.2vmax 'Roboto' !important;
+    }
+}
 .banner>h2 {
     margin: 5vmax;
-    font: 550 30px "Courier";
+    font: 550 30px "Courier" ;
 }
 
 .banner>p {
-    font: 700 42px 'Courier';
+    font: 700 42px 'Courier' ;
 }
 
 .banner>a>button {

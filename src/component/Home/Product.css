@@ -19,6 +19,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .productCard>div>span {
@@ -46,7 +47,7 @@
 
 @media (max-width:620px){
     .productCard > p {
-        font-size: 1.7vmax;
+        font-size: 1.7vmax; 
     }
     .productCard>div {
         margin: 0vmax;
@@ -57,6 +58,6 @@
     }
     .productCard>div>span {
         margin: 0 0.5vmax;
-        font: 300 1.2vmax "Franklin Gothis Medium";
+        font: 300 1vmax "Franklin Gothis Medium";
     }
 }

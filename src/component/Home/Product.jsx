@@ -8,7 +8,7 @@ const Product = ({product}) => {
         <img src={product.images[0].url} alt={product.name}/>
         <p>{product.name}</p>
         <div>
-            12345 <span>(34 Reviews)</span>
+            123456213 <span>(34 Reviews)</span>
         </div>
         <span>{product.price}</span>
     </Link>
